@@ -1,0 +1,95 @@
+:root {
+    --background: #0C0C0C;
+    --text: #CFCFCF;
+
+    --user: #16C60C;
+    --domain: #16C60C;
+
+    --path: #3B78FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: var(--text);
+}
+
+body {
+    background: var(--background);
+    min-height: 100vh;
+}
+
+span {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.logs,
+.command {
+    margin: 0px 15px;
+}
+
+.command,
+.prefix,
+.log {
+    display: flex;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.command input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.user {
+    color: var(--user);
+}
+
+.domain {
+    color: var(--domain);
+}
+
+.path {
+    color: var(--path);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: black;
+    margin: 0;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.header .infos {
+    display: flex;
+    padding: 1vh 0;
+}
+
+.header,
+.header * {
+    color: white;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.close {
+    width: 7vh;
+    border: none;
+    background: none;
+    padding: 1vh 15px;
+    margin: 0;
+    transition: background .2s ease;
+}
+
+.close:hover {
+    background: red;
+}

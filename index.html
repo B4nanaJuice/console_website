@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>*boop*</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="infos">
+            <p class="user"></p>
+            @
+            <p class="domain"></p>
+            :
+            <p class="path"></p>
+        </div>
+        <button class="close" onclick="close()">X</button>
+    </div>
+
+    <div class="logs">
+        <!-- <div class="log">
+            <p>Welcome</p>
+            <p>You, how are u</p>
+        </div> -->
+    </div>
+
+    <div class="command">
+        <!-- Set in one line or in each command, some text will go on the next line -->
+        <div class="prefix"><p class="user"></p>@<p class="domain"></p>:<p class="path"></p><i>$</i></div><input type="text" class="commandContent" autofocus >
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="index.js" type="module"></script>
+    
+</body>
+</html>
