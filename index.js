@@ -14,6 +14,7 @@ cmd.addCommand("./commands/whoami.js")
 
 cmd.addCommand("./commands/cd.js")
 cmd.addCommand("./commands/cat.js")
+cmd.addCommand("./commands/ls.js")
 
 $('body').on("click", function(event) {
     $(".commandContent").focus()

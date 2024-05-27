@@ -7,15 +7,17 @@ export const command = {
         if (args.length == 0) {
             terminal.addLog(this.simpleInfos)
         } else {
-            // Hardcode starts here
-            if (args[0] == "social" && terminal.path == "/") {
-                terminal.path = "/social"
-                terminal.init()
-            } else if (["../", "/"].includes(args[0]) && terminal.path == "/social") {
-                terminal.path = "/"
-                terminal.init()
+            let resp = terminal.fileManager.getContent(terminal.path.join("/") + "/" + args[0])
+            if (resp == null) {
+                terminal.addLog(`cd : ${args[0]} : No such file or directory`)
+            } else {
+                if (typeof resp == 'object') {
+                    terminal.path = terminal.fileManager.formatPath(terminal.path.join("/") + "/" + args[0])
+                    terminal.init()
+                } else {
+                    terminal.addLog(`cd : ${args[0]} : Not a directory`)
+                }
             }
-            // Hardcode ends here
         }
         
     },

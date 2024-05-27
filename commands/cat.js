@@ -7,7 +7,7 @@ export const command = {
         if (args.length == 0) {
             terminal.addLog(this.simpleInfos)
         } else {
-            let resp = terminal.fileManager.getContent(terminal.path + "/" + args[0])
+            let resp = terminal.fileManager.getContent(terminal.path.join("/") + "/" + args[0])
             if (resp == null) {
                 terminal.addLog(`cat : ${args[0]} : No such file or directory`)
             } else {

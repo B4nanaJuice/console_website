@@ -7,7 +7,7 @@ export const terminalManager = {
     // Infos to show in fornt of each command
     user: "guest",
     domain: document.location.host, // maxew.dev
-    path: "/",
+    path: [],
 
     fileManager: tree,
 
@@ -41,7 +41,7 @@ export const terminalManager = {
     },
 
     getPath: function() {
-        return this.path;
+        return "/" + this.path.join("/")
     },
 
     getDomain: function() {
