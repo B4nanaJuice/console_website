@@ -1,9 +1,9 @@
 export const tree = {
     tree: {
         "social": {
-            "telegram": "ma_x_ew",
-            "discord": "b4nanajuice",
-            "twitter": 'Here is my Twitter ! <a href="https://www.twitter.com/ma_x_ew" target="_blank">ma_x_ew</a>',
+            "telegram": "",
+            "discord": "",
+            "twitter": '',
             "test": {
                 "coucou": "foo",
                 "bar": {
