@@ -24,8 +24,7 @@ export const command = {
 
     // Information to show when the user wants to (help [command])
     infos: `cd : cd [path]
-    | Change the location
-    `,
+    | Change the location`,
 
     // One-line information to show when the user calls help command
     simpleInfos: `cd [path]`

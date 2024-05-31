@@ -20,7 +20,7 @@ export const terminalManager = {
     addLog: function(log) {
         // Add one line with the log to the logs area
         // Keeps the lining in the text of the log
-        $(".logs").append('<div class="log">' + log.replaceAll('\n', '</br>') + '</div>')
+        $(".logs").append('<div class="log">' + log.replaceAll('\n', `&nbsp;<br />`) + '</div>')
         // Scrolls to the bottom of the page
         window.scrollTo(0, document.body.scrollHeight);
 

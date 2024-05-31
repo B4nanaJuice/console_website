@@ -9,8 +9,7 @@ export const command = {
 
     // Information to show when the user wants to (help [command])
     infos: `whoami : whoami
-    | Tells you who you are
-    `,
+    | Tells you who you are`,
 
     // One-line information to show when the user calls help command
     simpleInfos: `whoami`

@@ -9,8 +9,7 @@ export const command = {
 
     // Information to show when the user wants to (help [command])
     infos: `echo : echo [args...]
-    | Just repeats what you say. You can play with it and put some HTML tags (or JS code but this would be being evil)
-    `,
+    | Just repeats what you say. You can play with it and put some HTML tags (or JS code but this would be being evil)`,
 
     // One-line information to show when the user calls help command
     simpleInfos: `echo [args...]`

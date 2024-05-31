@@ -1,4 +1,5 @@
 export const tree = {
+    // The tree has to be the same as the tree in the files directory
     tree: {
         "social": {
             "telegram": "tel",
@@ -11,8 +12,12 @@ export const tree = {
                 }
             }
         },
-        "foo": "bar",
-        "boo": "far"
+        "t": {
+            "tt": ''
+        },
+        "info": '',
+        "info2": '',
+        "whoismaxew": `Idkkk`
     },
 
     // Function to format a given path (removes each '../')

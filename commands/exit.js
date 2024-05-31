@@ -10,8 +10,7 @@ export const command = {
 
     // Information to show when the user wants to (help [command])
     infos: `exit : exit
-    | Nothing very interesting... It just closes the tab (if it works on your machine)
-    `,
+    | Nothing very interesting... It just closes the tab (if it works on your machine)`,
 
     // One-line information to show when the user calls help command
     simpleInfos: `exit`

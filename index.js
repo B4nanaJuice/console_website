@@ -16,6 +16,13 @@ cmd.addCommand("./commands/cd.js")
 cmd.addCommand("./commands/cat.js")
 cmd.addCommand("./commands/ls.js")
 
+cmd.addCommand("./commands/test.js")
+
+// Add welcome message
+terminal.addLog(`Hello you ! And welcome on my website :D
+If you don't know where to start or what to do, I recommand you tu use the command 'help'.
+Have fun here !`)
+
 $('body').on("click", function(event) {
     $(".commandContent").focus()
 })
@@ -40,7 +47,7 @@ $('body').keydown(function(event) {
             terminal.selectedCommand = terminal.commandHistory.length
         }
 
-        // If the command exists
+        // Execute the command if it exists
         if (command in cmd.commands) {
             cmd.commands[command].execute(parsedCommand, terminal)
         // If the command is the help command
@@ -48,16 +55,26 @@ $('body').keydown(function(event) {
             // If the user wants to ask help for on specific command
             if (parsedCommand.length > 0 && parsedCommand[0] != "") {
                 // If the command is known, print the infos of the command
-                if (parsedCommand[0] in cmd.commands) {
+                if (parsedCommand[0] in cmd.commands && cmd.commands[parsedCommand[0]].infos) {
                     terminal.addLog(cmd.commands[parsedCommand[0]].infos)
                 } else {
                     terminal.addLog(`help: no help topics match '${command}'.`)
                 }
             } else {
+                // Print some messages
+                terminal.addLog(`MXW pseudo-bash, version 1.0.0(1)-release (x86_64-pc-linux-GNU)
+                These commands are defined internally. Type 'help' to see this list.
+                Type 'help [command]' to find out more about the function 'command'.
+                Use 'cat info' to find out more about this website.
+
+                Here are all the commands you can use :
+                `)
+
                 // Show all small infos of each command
                 for (const [key, value] of Object.entries(cmd.commands)) {
-                    terminal.addLog(value.simpleInfos)
+                    if (value.simpleInfos) {terminal.addLog("| " + value.simpleInfos)}
                 }
+
             }
         } else if (command == "") {
         // If the command does not exist
